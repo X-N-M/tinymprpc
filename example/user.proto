@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package RPC;
+
+option cc_generic_services=true;
+
+message LoginRequest
+{
+    bytes name=1;
+    bytes pwd=2;
+}
+
+message ResultCode
+{
+    int32 errorcode=1;
+    bytes errormsg=2;
+}
+
+message LoginResponds
+{
+    ResultCode res=1;
+    int32 sucess=2;
+}
+
+message RegisterRequest
+{
+    int32 id=1;
+    bytes name=2;
+    bytes pwd=3;
+}
+
+
+message RegisterResponds
+{
+    ResultCode res=1;
+    int32 sucess=2;
+}
+
+service UserServiceRpc
+{
+    rpc Login(LoginRequest) returns (LoginResponds);
+    rpc Register(RegisterRequest) returns (RegisterResponds);
+}

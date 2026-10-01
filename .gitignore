@@ -1,0 +1,26 @@
+﻿# Build outputs
+/build/
+/build-*/
+/cmake-build*/
+
+# IDE and local caches
+/.cache/
+/.vscode/
+
+# Logs and local test output
+*.log
+*_log.txt
+/results/
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+CTestTestfile.cmake
+DartConfiguration.tcl
+Makefile
+
+# Protobuf generated sources
+*.pb.cc
+*.pb.h
